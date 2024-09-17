@@ -15,16 +15,56 @@
     background-size:cover;
     position: absolute;
     justify-content: center;
-    top: ;
+    top:0;
     left:0;
     right:0;
-    bottom:0px;
+    bottom:0;
     z-index: -1;
     /* margin-left: 25%; */
     justify-items: center;
     background-image: url('../../assets/task.jpg');
 }
-
+ .AddTask{
+    margin-top: 10%;
+ }
+ .image{
+    width: 50%;
+    height: 10%;
+    padding: 5px;
+    margin-top: 10px;
+ }
+ .photo{
+    width: 47%;
+    height: 10%;
+    padding: 5px;
+    margin-top: 10px;
+ }
+ .midImag{
+    width:50%;
+    border: solid;
+    margin-top: -6%;
+    display: flex;
+ }
+ .midtext{
+    font-size: x-large;
+    font-weight: bolder;
+    margin-top: 0%;
+    justify-content: center;
+    justify-items: center;
+ }
+ .midtt{
+    margin-top: -9%;
+    width: 90%;
+    margin-left:10%;
+    
+ }
+ .midphoto{
+    justify-content:center;
+    margin-left: 70%;
+    margin-top: -3%;
+    margin-left: 50%;
+    border: solid;
+ }
 .logo{
     font-family: lora;
     font-style: italic;
@@ -35,13 +75,14 @@
 
 }
 .second-set{
-    width: 100%;
-    float: right;
-    color: aliceblue;
+    margin-left: -10%;
     display: flex;
-    justify-content: space-evenly;
+    padding-bottom: 20%;
 }
 
+.login{
+    color:#fff
+}
 .text{
     font-size: 40px;
     font-weight: bolder;
@@ -56,13 +97,8 @@
 }
 
 .sign-up{
-    height: 15px;
-    width: 20px;
-    background: goldenrod;
-    border: 1px solid #077090;
-    border-radius: 5%;
-    padding: 10px;
-    margin-bottom: 30%;
+    color: #fff;
+    margin-bottom: -40%;
 }
 
 .input{
