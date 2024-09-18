@@ -1,6 +1,7 @@
 
 import style from "./Style/topNav.module.css"
-import { useState } from "react"
+import { useState} from "react"
+import{useNavigate} from "react-router-dom"
 import axios from "axios"
 
 
@@ -11,6 +12,7 @@ const [firstName,setFirstName] = useState("")
 const [email,setEmail] = useState("")
 const [password,setPassword] = useState("")
 const [phoneNumber,setPhoneNumber] = useState("")
+const navigate = useNavigate()
   
   const handleSignUp = async () =>{
      try{
@@ -22,6 +24,8 @@ const [phoneNumber,setPhoneNumber] = useState("")
             "password": password,
             "phoneNumber": phoneNumber
           } 
+
+          
 
       const response = await axios.post("http://localhost:8080/signUp",payload,{
 
@@ -39,7 +43,7 @@ const [phoneNumber,setPhoneNumber] = useState("")
     }catch(error){
       console.log(error)
     }
-
+    navigate('/login')
   }
    
   return (

@@ -1,11 +1,11 @@
-import { useState } from 'react'
+import { useState, useRoutes } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import TopNav from './components/topNav'
 import image from './assets/task.jpg'
 import SignUp from './components/SignUp'
-import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Login from './components/Login'
 import AddTask from './components/addTask'
 import { createBrowserRouter,RouterProvider } from 'react-router-dom'
@@ -18,13 +18,19 @@ import ROUTES from './router/router'
 
 
 function App() {
+  
   return (
-    <div>
-    <TopNav/>
-      {/* <SignUp/> */}
-       {/* <RouterProvider>router={router}</RouterProvider>  */}
-    {/* <AddTask/> */}
-    </div>
+      <Router>
+        <Routes>
+        {ROUTES.map((route, index) => (
+          <Route
+            key={index}
+            path={route.path}
+            element={route.element}
+          />
+        ))}
+        </Routes>
+      </Router>
   )
 }
 export default App

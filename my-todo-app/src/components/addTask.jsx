@@ -17,7 +17,7 @@ const AddTask = () => {
     
     const fetchTodos = async () =>{
         try {
-            const response = await axios.post("http://localhost:8080/getTask?email=Taye@gmail.com");
+            const response = await axios.get("http://localhost:8080/getTask?email=Taye@gmail.com");
             setTodos(response.data);
         } catch(error){
             if(error.response){

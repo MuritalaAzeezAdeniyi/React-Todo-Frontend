@@ -12,20 +12,31 @@ const TopNav = () => {
                     <div className={style['logo']}>BestToDoApp</div>
                 </div>
                 <div className={style['second-set']}>
-                    {/* <Link to="/login"> */}
+                     <Link to="/login"> 
                         <button className={style['login']}>LogIn</button>
-                    {/* </Link> */}
-                    {/* <Link to="/signUp"> */}
+                    </Link> 
+                    <Link to="/signUp">
                         <button className={style['sign-up']}>SignUp</button>
-                    {/* </Link> */}
+                     </Link> 
                     
                 </div>
+                 <div>
+                 <Link to="/signUp">
+                        <button className={style['sign-up']}>SignUp</button>
+                     </Link> 
+                     <Link to="/signUp">
+                        <button className={style['addTask']}>AddTask</button>
+                     </Link> 
+                 </div>
+
             </div>
           <img className={style['background']} src={background} alt="Background" /> 
-    
+          <Link to="/addTask">
+          <div className={style['task-1']}><button className={style['AddTask']}>AddTask</button></div>
+          </Link> 
           <div>
             <h1 className={style['text']}>Schedule Your <br/> Daily Task With <br/><span className={style['mid']}>Best Todo App!</span> </h1>
-            <button className={style['AddTask']}>AddTask</button>
+           
             <div className={style['midtt']}><h5 className={style['midtext']}>Explore idea collection</h5></div>
            <br/>
           

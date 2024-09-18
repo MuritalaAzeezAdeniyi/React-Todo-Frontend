@@ -1,12 +1,13 @@
 
 import style from "./Style/login.module.css"
 import {useState} from "react"
+import { useNavigate } from "react-router-dom"
 import axios from "axios"
 
 const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-
+  const navigate = useNavigate()
   const handleLogin = async () =>{
     const payload = {
       
@@ -25,6 +26,7 @@ const Login = () => {
       alert("Successful login")
     }catch(error){
       console.error("error login challenge:" ,error)
+      navigate ("/addTask")
     }
   }
     
